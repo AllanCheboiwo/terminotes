@@ -1,0 +1,127 @@
+# Compiled object files
+*.o
+*.obj
+
+# Executable files
+notesapp
+notesapp.exe
+app
+app.exe
+*.exe
+*.out
+*.app
+
+# Database files
+*.db
+*.db-journal
+*.sqlite
+*.sqlite3
+
+# Build directories
+build/
+dist/
+bin/
+
+# Debug files
+*.dSYM/
+debug/
+*.debug
+
+# Dependency files
+*.d
+*.dll
+*.so
+*.dylib
+
+# Editor and IDE files
+# VS Code
+.vscode/
+*.code-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.[#]*[#]
+.\#*
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Autotools
+autom4te.cache/
+aclocal.m4
+compile
+config.guess
+config.h
+config.h.in
+config.log
+config.status
+config.sub
+configure
+depcomp
+install-sh
+libtool
+ltmain.sh
+missing
+stamp-h1
+
+# Package files
+*.tar.gz
+*.zip
+*.7z
+
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+
+# Coverage reports
+*.gcda
+*.gcno
+*.gcov
+
+# Profiling files
+*.prof
+*.gprof
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Library files
+*.a
+*.lib
+
+# Backup files
+*.bak
+*.backup
+
+# OS generated files
+Icon?
+.nfs*
