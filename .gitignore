@@ -68,7 +68,6 @@ $RECYCLE.BIN/
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
-Makefile
 
 # Autotools
 autom4te.cache/
