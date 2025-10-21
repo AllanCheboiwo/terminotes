@@ -3,8 +3,8 @@
 *.obj
 
 # Executable files
-notesapp
-notesapp.exe
+terminotes
+terminotes.exe
 app
 app.exe
 *.exe

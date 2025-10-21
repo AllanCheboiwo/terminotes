@@ -3,7 +3,7 @@
 CC = gcc
 CFLAGS = -Wall -Wextra
 LIBS = -lsqlite3
-TARGET = notesapp
+TARGET = terminotes
 SOURCES = main.c database.c
 OBJECTS = $(SOURCES:.c=.o)
 

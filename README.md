@@ -39,7 +39,7 @@ sudo dnf install gcc sqlite-devel
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd notetakingapp
+cd terminotes
 ```
 
 2. Build the application:
@@ -52,58 +52,58 @@ make
 make install
 ```
 
-After installation, you can run `notesapp` from any terminal directory.
+After installation, you can run `terminotes` from any terminal directory.
 
 ## Usage
 
 ### Add a Note
 ```bash
-notesapp take "Your note here"
+terminotes take "Your note here"
 ```
 
 ### Read Notes
 
 Read notes from the last week (default):
 ```bash
-notesapp read
+terminotes read
 ```
 
 Read notes from the last 24 hours:
 ```bash
-notesapp read -d
+terminotes read -d
 ```
 
 Read notes from the last week:
 ```bash
-notesapp read -w
+terminotes read -w
 ```
 
 Read notes from the last month:
 ```bash
-notesapp read -m
+terminotes read -m
 ```
 
 Read all notes ever created:
 ```bash
-notesapp read -a
+terminotes read -a
 ```
 
 ### Get Help
 ```bash
-notesapp help
+terminotes help
 ```
 
 ## Examples
 
 ```bash
 # Add a meeting note
-notesapp take "Meeting with team at 3 PM"
+terminotes take "Meeting with team at 3 PM"
 
 # View today's notes
-notesapp read -d
+terminotes read -d
 
 # View all notes from the past month
-notesapp read -m
+terminotes read -m
 ```
 
 ## Uninstallation
@@ -118,5 +118,5 @@ make clean
 
 - **Language**: C
 - **Database**: SQLite3
-- **Data Storage**: `~/.config/terminotes/notes.db` (centralized location)
+- **Data Storage**: `~/.config/terminotes/notes.db` 
 - **Build**: Standard Makefile with `make`, `make install`, `make clean`, `make uninstall` targets
