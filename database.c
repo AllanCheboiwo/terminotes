@@ -1,6 +1,37 @@
 #include "database.h"
+#include <unistd.h>
+#include <sys/stat.h>
+#include <stdlib.h>
+#include <string.h>
 
 sqlite3* open_database(const char* db_path) {
+
+    if (db_path == NULL || (db_path[0] == '~' && db_path[1] == '/')) {
+        const char* home = getenv("HOME");
+        if (!home) {
+            fprintf(stderr, "Error: Could not determine home directory\n");
+            return NULL;
+        }
+        
+
+        static char full_db_path[512];
+        
+        char config_dir[512];
+        snprintf(config_dir, sizeof(config_dir), "%s/.config/terminotes", home);
+
+        struct stat st = {0};
+        if (stat(config_dir, &st) == -1) {
+
+            if (mkdir(config_dir, 0755) == -1) {
+                fprintf(stderr, "Error: Could not create config directory: %s\n", config_dir);
+                return NULL;
+            }
+        }
+
+        snprintf(full_db_path, sizeof(full_db_path), "%s/notes.db", config_dir);
+        db_path = full_db_path;
+    }
+    
     sqlite3* db = NULL;
     int rc = sqlite3_open(db_path, &db);
     

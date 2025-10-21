@@ -2,7 +2,7 @@
 #include <string.h>
 #include <time.h>
 
-#define DB_PATH "notes.db"
+#define DB_PATH "~/.config/terminotes/notes.db"
 
 int print_results(void* data, int argc, char** argv, char** col_names);
 void print_usage(const char* program_name);
